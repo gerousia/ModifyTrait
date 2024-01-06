@@ -1,0 +1,25 @@
+﻿l_english:
+
+# TEMPLATE DECISION
+# mlt_$LIFESTYLE$_lifestyle_trait_gain_decision:0 "title"
+# mlt_$LIFESTYLE$_lifestyle_trait_gain_decision_tooltip:3 "tooltip"
+# mlt_$LIFESTYLE$_lifestyle_trait_gain_decision_desc:1 "description"
+# mlt_$LIFESTYLE$_lifestyle_trait_gain_decision_effect_tooltip:4 "effect tooltip"
+# mlt_$LIFESTYLE$_lifestyle_trait_gain_decision_confirm:0 "confirm"
+
+# TITLE PREFIX
+mlt_title_prefix_gain:0 "Gain:"
+mlt_title_prefix_lose:0 "Lose:"
+
+# BLADEMASTER DECISION
+mlt_blademaster_lifestyle_trait_gain_decision:0 "$mlt_title_prefix_gain$ Blademaster Lifestyle Trait"
+mlt_blademaster_lifestyle_trait_gain_decision_tooltip:3 "tooltip"
+mlt_blademaster_lifestyle_trait_gain_decision_desc:1 "Finish both tracks of the [GetTrait('lifestyle_traveler').GetName( root )] [trait|E]"
+mlt_blademaster_lifestyle_trait_gain_decision_effect_tooltip:4 "effect tooltip"
+mlt_blademaster_lifestyle_trait_gain_decision_confirm:0 "confirm"
+
+mlt_blademaster_lifestyle_trait_lose_decision:0 "$mlt_title_prefix_lose$ Blademaster Lifestyle Trait"
+mlt_blademaster_lifestyle_trait_lose_decision_tooltip:3 "tooltip"
+mlt_blademaster_lifestyle_trait_lose_decision_desc:1 "Finish both tracks of the [GetTrait('lifestyle_traveler').GetName( root )] [trait|E]"
+mlt_blademaster_lifestyle_trait_lose_decision_effect_tooltip:4 "effect tooltip"
+mlt_blademaster_lifestyle_trait_lose_decision_confirm:0 "confirm"
