@@ -1,0 +1,321 @@
+
+namespace = mod_lifestyle_trait_track
+
+scripted_effect mlt_add_defined_tiered_trait_xp_effect = {
+	$TARGET$ = {
+		if = {
+			limit = { NOT = { has_trait = $TRAIT$ } }
+			add_trait = $TRAIT$
+		}
+		if = { 
+			limit = {
+				has_trait_xp = {
+					trait = $TRAIT$
+					track = $TRACK$
+					value < 100
+				}
+			}
+			add_trait_xp = {
+				TRAIT = $TRAIT$
+				TRACK = $TRACK$
+				value = 100
+			}
+		}
+	}
+}
+
+scripted_effect mlt_remove_defined_tiered_trait_xp_effect = {
+	$TARGET$ = {
+		if = {
+			limit = { has_trait = $TRAIT$ }
+			remove_trait = $TRAIT$
+		}
+		if = { 
+			limit = {
+				NOT = { 
+					has_trait_xp = {
+						trait = $TRAIT$
+						track = $TRACK$
+						value = 0
+					}
+				}
+			}
+			add_trait_xp = {
+				TRAIT = $TRAIT$
+				TRACK = $TRACK$
+				value = -100
+			}
+		}
+	}
+}
+
+# # # # # # # # # # # # # # # # # # # #
+
+# BLADEMASTER 1001-1009
+mod_lifestyle_trait_track.1001 = {
+	immediate = {
+		mlt_add_defined_tiered_trait_xp_effect = { # BLADEMASTER TRACK ADD
+			TARGET = root
+			TRAIT = lifestyle_blademaster
+			TRACK = blademaster
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1002 = {
+	immediate = {
+		mlt_remove_defined_tiered_trait_xp_effect = { # BLADEMASTER TRACK REMOVE
+			TARGET = root
+			TRAIT = lifestyle_blademaster
+			TRACK = blademaster
+		}
+	}
+}
+
+
+# EAGER REVELER 1011-1019
+mod_lifestyle_trait_track.1011 = { # REVELER TRACK ADD
+	immediate = {
+		mlt_add_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = lifestyle_reveler
+			TRACK = reveler
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1012 = { # REVELER TRACK REMOVE
+	immediate = {
+		mlt_remove_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = lifestyle_reveler
+			TRACK = reveler
+		}
+	}
+}
+
+# NOVICE PHYSICIAN 1021-1029
+mod_lifestyle_trait_track.1021 = { # PHYSICIAN TRACK ADD
+	immediate = {
+		mlt_add_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = lifestyle_physician
+			TRACK = physician
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1022 = { # PHYSICIAN TRACK REMOVE
+	immediate = {
+		mlt_remove_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = lifestyle_physician
+			TRACK = physician
+		}
+	}
+}
+
+# PILGRIM 1031-1039
+mod_lifestyle_trait_track.1031 = { # PILGRIM TRACK ADD
+	immediate = {
+		mlt_add_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = pilgrim
+			TRACK = pilgrim
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1032 = { # PILGRIM TRACK REMOVE
+	immediate = {
+		mlt_remove_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = pilgrim
+			TRACK = pilgrim
+		}
+	}
+}
+
+# WISE MAN/WOMAN 1041-1049
+mod_lifestyle_trait_track.1041 = { # MYSTIC TRACK ADD
+	immediate = {
+		mlt_add_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = lifestyle_mystic
+			TRACK = mystic
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1042 = { # MYSTIC TRACK REMOVE
+	immediate = {
+		mlt_remove_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = lifestyle_mystic
+			TRACK = mystic
+		}
+	}
+}
+
+# HUNTER 1051-1059
+mod_lifestyle_trait_track.1051 = { # HUNTER TRACK ADD
+	immediate = {
+		mlt_add_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = lifestyle_hunter
+			TRACK = hunter
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1052 = { # HUNTER TRACK REMOVE
+	immediate = {
+		mlt_remove_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = lifestyle_hunter
+			TRACK = hunter
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1053 = { # FALCONER TRACK ADD
+	immediate = {
+		mlt_add_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = lifestyle_hunter
+			TRACK = falconer
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1054 = { # FALCONER TRACK REMOVE
+	immediate = {
+		mlt_remove_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = lifestyle_hunter
+			TRACK = falconer
+		}
+	}
+}
+
+# TRAVELER 1061-1069
+mod_lifestyle_trait_track.1061 = { # TRAVEL TRACK ADD
+	immediate = {
+		mlt_add_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = lifestyle_traveler
+			TRACK = travel
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1062 = { # TRAVEL TRACK REMOVE
+	immediate = {
+		mlt_remove_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = lifestyle_traveler
+			TRACK = travel
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1063 = { # DANGER TRACK ADD
+	immediate = {
+		mlt_add_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = lifestyle_traveler
+			TRACK = danger
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1064 = { # DANGER TRACK REMOVE
+	immediate = {
+		mlt_remove_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = lifestyle_traveler
+			TRACK = danger
+		}
+	}
+}
+
+# HASTILUDER 1071-1079
+mod_lifestyle_trait_track.1071 = { # FOOT TRACK ADD
+	immediate = {
+		mlt_add_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = tourney_participant
+			TRACK = foot
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1072 = { # TRAVEL TRACK REMOVE
+	immediate = {
+		mlt_remove_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = tourney_participant
+			TRACK = foot
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1073 = { # BOW TRACK ADD
+	immediate = {
+		mlt_add_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = tourney_participant
+			TRACK = bow
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1074 = { # BOW TRACK REMOVE
+	immediate = {
+		mlt_remove_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = tourney_participant
+			TRACK = bow
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1075 = { # HORSE TRACK ADD
+	immediate = {
+		mlt_add_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = tourney_participant
+			TRACK = horse
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1076 = { # HORSE TRACK REMOVE
+	immediate = {
+		mlt_remove_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = tourney_participant
+			TRACK = horse
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1077 = { # WIT TRACK ADD
+	immediate = {
+		mlt_add_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = tourney_participant
+			TRACK = wit
+		}
+	}
+}
+
+mod_lifestyle_trait_track.1078 = { # WIT TRACK REMOVE
+	immediate = {
+		mlt_remove_defined_tiered_trait_xp_effect = {
+			TARGET = root
+			TRAIT = tourney_participant
+			TRACK = wit
+		}
+	}
+}
