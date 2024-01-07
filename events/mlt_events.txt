@@ -1,7 +1,24 @@
 
-namespace = mod_lifestyle_trait_track
+namespace = modify_leveled_trait_events
 
-scripted_effect mlt_add_defined_tiered_trait_xp_effect = {
+##############################
+## Modify Leveled Trait Track Experience Events
+## 1000-1100
+## by Gerousia
+##############################
+
+# modify_leveled_trait_events.1001-1009 - Blademaster
+# modify_leveled_trait_events.1011-1019 - Reveler
+# modify_leveled_trait_events.1021-1029 - Physician
+# modify_leveled_trait_events.1031-1039 - Pilgrim
+# modify_leveled_trait_events.1041-1049 - Mystic
+# modify_leveled_trait_events.1051-1059 - Hunter
+# modify_leveled_trait_events.1061-1069 - Traveler
+# modify_leveled_trait_events.1071-1079 - Hastiluder
+
+##########################################################################################
+
+scripted_effect mlt_add_trait_track_xp_effect = {
 	$TARGET$ = {
 		if = {
 			limit = { NOT = { has_trait = $TRAIT$ } }
@@ -24,7 +41,7 @@ scripted_effect mlt_add_defined_tiered_trait_xp_effect = {
 	}
 }
 
-scripted_effect mlt_remove_defined_tiered_trait_xp_effect = {
+scripted_effect mlt_remove_trait_track_xp_effect = {
 	$TARGET$ = {
 		if = {
 			limit = { has_trait = $TRAIT$ }
@@ -49,12 +66,16 @@ scripted_effect mlt_remove_defined_tiered_trait_xp_effect = {
 	}
 }
 
-# # # # # # # # # # # # # # # # # # # #
+##########################################################################################
 
-# BLADEMASTER 1001-1009
-mod_lifestyle_trait_track.1001 = {
+##############################
+# BLADEMASTER 
+# 1001-1009
+##############################
+
+modify_leveled_trait_events.1001 = {
 	immediate = {
-		mlt_add_defined_tiered_trait_xp_effect = { # BLADEMASTER TRACK ADD
+		mlt_add_trait_track_xp_effect = { # BLADEMASTER TRACK ADD
 			TARGET = root
 			TRAIT = lifestyle_blademaster
 			TRACK = blademaster
@@ -62,9 +83,9 @@ mod_lifestyle_trait_track.1001 = {
 	}
 }
 
-mod_lifestyle_trait_track.1002 = {
+modify_leveled_trait_events.1002 = {
 	immediate = {
-		mlt_remove_defined_tiered_trait_xp_effect = { # BLADEMASTER TRACK REMOVE
+		mlt_remove_trait_track_xp_effect = { # BLADEMASTER TRACK REMOVE
 			TARGET = root
 			TRAIT = lifestyle_blademaster
 			TRACK = blademaster
@@ -72,11 +93,14 @@ mod_lifestyle_trait_track.1002 = {
 	}
 }
 
+##############################
+# REVELER 
+# 1011-1019
+##############################
 
-# EAGER REVELER 1011-1019
-mod_lifestyle_trait_track.1011 = { # REVELER TRACK ADD
+modify_leveled_trait_events.1011 = { # REVELER TRACK ADD
 	immediate = {
-		mlt_add_defined_tiered_trait_xp_effect = {
+		mlt_add_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = lifestyle_reveler
 			TRACK = reveler
@@ -84,9 +108,9 @@ mod_lifestyle_trait_track.1011 = { # REVELER TRACK ADD
 	}
 }
 
-mod_lifestyle_trait_track.1012 = { # REVELER TRACK REMOVE
+modify_leveled_trait_events.1012 = { # REVELER TRACK REMOVE
 	immediate = {
-		mlt_remove_defined_tiered_trait_xp_effect = {
+		mlt_remove_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = lifestyle_reveler
 			TRACK = reveler
@@ -94,10 +118,14 @@ mod_lifestyle_trait_track.1012 = { # REVELER TRACK REMOVE
 	}
 }
 
-# NOVICE PHYSICIAN 1021-1029
-mod_lifestyle_trait_track.1021 = { # PHYSICIAN TRACK ADD
+##############################
+# PHYSICIAN 
+# 1021-1029
+##############################
+
+modify_leveled_trait_events.1021 = { # PHYSICIAN TRACK ADD
 	immediate = {
-		mlt_add_defined_tiered_trait_xp_effect = {
+		mlt_add_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = lifestyle_physician
 			TRACK = physician
@@ -105,9 +133,9 @@ mod_lifestyle_trait_track.1021 = { # PHYSICIAN TRACK ADD
 	}
 }
 
-mod_lifestyle_trait_track.1022 = { # PHYSICIAN TRACK REMOVE
+modify_leveled_trait_events.1022 = { # PHYSICIAN TRACK REMOVE
 	immediate = {
-		mlt_remove_defined_tiered_trait_xp_effect = {
+		mlt_remove_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = lifestyle_physician
 			TRACK = physician
@@ -115,10 +143,14 @@ mod_lifestyle_trait_track.1022 = { # PHYSICIAN TRACK REMOVE
 	}
 }
 
-# PILGRIM 1031-1039
-mod_lifestyle_trait_track.1031 = { # PILGRIM TRACK ADD
+##############################
+# PILGRIM 
+# 1031-1039
+##############################
+
+modify_leveled_trait_events.1031 = { # PILGRIM TRACK ADD
 	immediate = {
-		mlt_add_defined_tiered_trait_xp_effect = {
+		mlt_add_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = pilgrim
 			TRACK = pilgrim
@@ -126,9 +158,9 @@ mod_lifestyle_trait_track.1031 = { # PILGRIM TRACK ADD
 	}
 }
 
-mod_lifestyle_trait_track.1032 = { # PILGRIM TRACK REMOVE
+modify_leveled_trait_events.1032 = { # PILGRIM TRACK REMOVE
 	immediate = {
-		mlt_remove_defined_tiered_trait_xp_effect = {
+		mlt_remove_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = pilgrim
 			TRACK = pilgrim
@@ -136,10 +168,14 @@ mod_lifestyle_trait_track.1032 = { # PILGRIM TRACK REMOVE
 	}
 }
 
-# WISE MAN/WOMAN 1041-1049
-mod_lifestyle_trait_track.1041 = { # MYSTIC TRACK ADD
+##############################
+# MYSTIC 
+# 1041-1049
+##############################
+
+modify_leveled_trait_events.1041 = { # MYSTIC TRACK ADD
 	immediate = {
-		mlt_add_defined_tiered_trait_xp_effect = {
+		mlt_add_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = lifestyle_mystic
 			TRACK = mystic
@@ -147,9 +183,9 @@ mod_lifestyle_trait_track.1041 = { # MYSTIC TRACK ADD
 	}
 }
 
-mod_lifestyle_trait_track.1042 = { # MYSTIC TRACK REMOVE
+modify_leveled_trait_events.1042 = { # MYSTIC TRACK REMOVE
 	immediate = {
-		mlt_remove_defined_tiered_trait_xp_effect = {
+		mlt_remove_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = lifestyle_mystic
 			TRACK = mystic
@@ -157,10 +193,14 @@ mod_lifestyle_trait_track.1042 = { # MYSTIC TRACK REMOVE
 	}
 }
 
-# HUNTER 1051-1059
-mod_lifestyle_trait_track.1051 = { # HUNTER TRACK ADD
+##############################
+# HUNTER 
+# 1051-1059
+##############################
+
+modify_leveled_trait_events.1051 = { # HUNTER TRACK ADD
 	immediate = {
-		mlt_add_defined_tiered_trait_xp_effect = {
+		mlt_add_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = lifestyle_hunter
 			TRACK = hunter
@@ -168,9 +208,9 @@ mod_lifestyle_trait_track.1051 = { # HUNTER TRACK ADD
 	}
 }
 
-mod_lifestyle_trait_track.1052 = { # HUNTER TRACK REMOVE
+modify_leveled_trait_events.1052 = { # HUNTER TRACK REMOVE
 	immediate = {
-		mlt_remove_defined_tiered_trait_xp_effect = {
+		mlt_remove_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = lifestyle_hunter
 			TRACK = hunter
@@ -178,9 +218,9 @@ mod_lifestyle_trait_track.1052 = { # HUNTER TRACK REMOVE
 	}
 }
 
-mod_lifestyle_trait_track.1053 = { # FALCONER TRACK ADD
+modify_leveled_trait_events.1053 = { # FALCONER TRACK ADD
 	immediate = {
-		mlt_add_defined_tiered_trait_xp_effect = {
+		mlt_add_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = lifestyle_hunter
 			TRACK = falconer
@@ -188,9 +228,9 @@ mod_lifestyle_trait_track.1053 = { # FALCONER TRACK ADD
 	}
 }
 
-mod_lifestyle_trait_track.1054 = { # FALCONER TRACK REMOVE
+modify_leveled_trait_events.1054 = { # FALCONER TRACK REMOVE
 	immediate = {
-		mlt_remove_defined_tiered_trait_xp_effect = {
+		mlt_remove_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = lifestyle_hunter
 			TRACK = falconer
@@ -198,10 +238,14 @@ mod_lifestyle_trait_track.1054 = { # FALCONER TRACK REMOVE
 	}
 }
 
-# TRAVELER 1061-1069
-mod_lifestyle_trait_track.1061 = { # TRAVEL TRACK ADD
+##############################
+# TRAVELER 
+# 1061-1069
+##############################
+
+modify_leveled_trait_events.1061 = { # TRAVEL TRACK ADD
 	immediate = {
-		mlt_add_defined_tiered_trait_xp_effect = {
+		mlt_add_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = lifestyle_traveler
 			TRACK = travel
@@ -209,9 +253,9 @@ mod_lifestyle_trait_track.1061 = { # TRAVEL TRACK ADD
 	}
 }
 
-mod_lifestyle_trait_track.1062 = { # TRAVEL TRACK REMOVE
+modify_leveled_trait_events.1062 = { # TRAVEL TRACK REMOVE
 	immediate = {
-		mlt_remove_defined_tiered_trait_xp_effect = {
+		mlt_remove_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = lifestyle_traveler
 			TRACK = travel
@@ -219,9 +263,9 @@ mod_lifestyle_trait_track.1062 = { # TRAVEL TRACK REMOVE
 	}
 }
 
-mod_lifestyle_trait_track.1063 = { # DANGER TRACK ADD
+modify_leveled_trait_events.1063 = { # DANGER TRACK ADD
 	immediate = {
-		mlt_add_defined_tiered_trait_xp_effect = {
+		mlt_add_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = lifestyle_traveler
 			TRACK = danger
@@ -229,9 +273,9 @@ mod_lifestyle_trait_track.1063 = { # DANGER TRACK ADD
 	}
 }
 
-mod_lifestyle_trait_track.1064 = { # DANGER TRACK REMOVE
+modify_leveled_trait_events.1064 = { # DANGER TRACK REMOVE
 	immediate = {
-		mlt_remove_defined_tiered_trait_xp_effect = {
+		mlt_remove_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = lifestyle_traveler
 			TRACK = danger
@@ -239,10 +283,14 @@ mod_lifestyle_trait_track.1064 = { # DANGER TRACK REMOVE
 	}
 }
 
-# HASTILUDER 1071-1079
-mod_lifestyle_trait_track.1071 = { # FOOT TRACK ADD
+##############################
+# HASTILUDER 
+# 1071-1079
+##############################
+
+modify_leveled_trait_events.1071 = { # FOOT TRACK ADD
 	immediate = {
-		mlt_add_defined_tiered_trait_xp_effect = {
+		mlt_add_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = tourney_participant
 			TRACK = foot
@@ -250,9 +298,9 @@ mod_lifestyle_trait_track.1071 = { # FOOT TRACK ADD
 	}
 }
 
-mod_lifestyle_trait_track.1072 = { # TRAVEL TRACK REMOVE
+modify_leveled_trait_events.1072 = { # FOOT TRACK REMOVE
 	immediate = {
-		mlt_remove_defined_tiered_trait_xp_effect = {
+		mlt_remove_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = tourney_participant
 			TRACK = foot
@@ -260,9 +308,9 @@ mod_lifestyle_trait_track.1072 = { # TRAVEL TRACK REMOVE
 	}
 }
 
-mod_lifestyle_trait_track.1073 = { # BOW TRACK ADD
+modify_leveled_trait_events.1073 = { # BOW TRACK ADD
 	immediate = {
-		mlt_add_defined_tiered_trait_xp_effect = {
+		mlt_add_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = tourney_participant
 			TRACK = bow
@@ -270,9 +318,9 @@ mod_lifestyle_trait_track.1073 = { # BOW TRACK ADD
 	}
 }
 
-mod_lifestyle_trait_track.1074 = { # BOW TRACK REMOVE
+modify_leveled_trait_events.1074 = { # BOW TRACK REMOVE
 	immediate = {
-		mlt_remove_defined_tiered_trait_xp_effect = {
+		mlt_remove_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = tourney_participant
 			TRACK = bow
@@ -280,9 +328,9 @@ mod_lifestyle_trait_track.1074 = { # BOW TRACK REMOVE
 	}
 }
 
-mod_lifestyle_trait_track.1075 = { # HORSE TRACK ADD
+modify_leveled_trait_events.1075 = { # HORSE TRACK ADD
 	immediate = {
-		mlt_add_defined_tiered_trait_xp_effect = {
+		mlt_add_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = tourney_participant
 			TRACK = horse
@@ -290,9 +338,9 @@ mod_lifestyle_trait_track.1075 = { # HORSE TRACK ADD
 	}
 }
 
-mod_lifestyle_trait_track.1076 = { # HORSE TRACK REMOVE
+modify_leveled_trait_events.1076 = { # HORSE TRACK REMOVE
 	immediate = {
-		mlt_remove_defined_tiered_trait_xp_effect = {
+		mlt_remove_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = tourney_participant
 			TRACK = horse
@@ -300,9 +348,9 @@ mod_lifestyle_trait_track.1076 = { # HORSE TRACK REMOVE
 	}
 }
 
-mod_lifestyle_trait_track.1077 = { # WIT TRACK ADD
+modify_leveled_trait_events.1077 = { # WIT TRACK ADD
 	immediate = {
-		mlt_add_defined_tiered_trait_xp_effect = {
+		mlt_add_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = tourney_participant
 			TRACK = wit
@@ -310,9 +358,9 @@ mod_lifestyle_trait_track.1077 = { # WIT TRACK ADD
 	}
 }
 
-mod_lifestyle_trait_track.1078 = { # WIT TRACK REMOVE
+modify_leveled_trait_events.1078 = { # WIT TRACK REMOVE
 	immediate = {
-		mlt_remove_defined_tiered_trait_xp_effect = {
+		mlt_remove_trait_track_xp_effect = {
 			TARGET = root
 			TRAIT = tourney_participant
 			TRACK = wit

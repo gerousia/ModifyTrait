@@ -1,0 +1,49 @@
+﻿l_english:
+
+# DECISION EFFECT
+ REMOVE_LEVELED_TRAIT_DECISION_WARNING_DESC:1 "@warning_icon!#X This will remove all [trait_level_track_xp|E]"
+
+# PREFIX
+ mlt_title_prefix_gain:0 "Gain"
+ mlt_title_prefix_lose:0 "Lose"
+
+# DECISION
+
+ mlt_leveled_trait_decision_lose: "$mlt_title_prefix_lose$ a leveled Trait "
+ mlt_leveled_trait_decision_desc: "In a bold and decisive move, you renounce a [trait|L], embracing a path less traveled. This departure signifies an exodus from the past, heralding a journey into uncharted territories of character development."
+
+ mlt_choose_leveled_trait_blademaster_name: "[GetTrait('lifestyle_blademaster').GetName( ROOT.Char )]"
+ mlt_choose_leveled_trait_blademaster_name_lose: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('lifestyle_blademaster').GetName( ROOT.Char )]#!#!"
+ mlt_choose_leveled_trait_blademaster_desc: "$trait_blademaster_1_desc$"
+ mlt_choose_leveled_trait_blademaster_tooltip: "$trait_blademaster_1_desc$" 
+
+ mlt_choose_leveled_trait_reveler_name: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('lifestyle_reveler').GetName( ROOT.Char )]#!#!"
+ mlt_choose_leveled_trait_reveler_desc: "$trait_blademaster_1_desc$"
+ mlt_choose_leveled_trait_reveler_tooltip: "$trait_blademaster_1_desc$" 
+
+ mlt_choose_leveled_trait_physician_name: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('lifestyle_physician').GetName( ROOT.Char )]#!#!"
+ mlt_choose_leveled_trait_physician_desc: "$trait_blademaster_1_desc$"
+ mlt_choose_leveled_trait_physician_tooltip: "$trait_blademaster_1_desc$" 
+
+ mlt_choose_leveled_trait_pilgrim_name: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('pilgrim').GetName( ROOT.Char )]#!#!"
+ mlt_choose_leveled_trait_pilgrim_desc: "$trait_blademaster_1_desc$"
+ mlt_choose_leveled_trait_pilgrim_tooltip: "$trait_blademaster_1_desc$" 
+
+ mlt_choose_leveled_trait_mystic_name: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('lifestyle_mystic').GetName( ROOT.Char )]#!#!"
+ mlt_choose_leveled_trait_mystic_desc: "$trait_blademaster_1_desc$"
+ mlt_choose_leveled_trait_mystic_tooltip: "$trait_blademaster_1_desc$" 
+
+ mlt_choose_leveled_trait_hunter_name: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('lifestyle_hunter').GetName( ROOT.Char )]#!#!"
+ mlt_choose_leveled_trait_hunter_desc: "$trait_blademaster_1_desc$"
+ mlt_choose_leveled_trait_hunter_tooltip: "$trait_blademaster_1_desc$"
+
+ mlt_choose_leveled_trait_traveler_name: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('lifestyle_traveler').GetName( ROOT.Char )]#!#!"
+ mlt_choose_leveled_trait_traveler_desc: "$trait_blademaster_1_desc$"
+ mlt_choose_leveled_trait_traveler_tooltip: "$trait_blademaster_1_desc$"
+
+ mlt_choose_leveled_trait_hastiluder_name: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('tourney_participant').GetName( ROOT.Char )]#!#!"
+ mlt_choose_leveled_trait_hastiluder_desc: "$trait_blademaster_1_desc$"
+ mlt_choose_leveled_trait_hastiluder_tooltip: "$trait_blademaster_1_desc$"
+
+ mlt_leveled_trait_decision_confirm: "Embrace Change" 
+ MLT_CHOOSE_LEVELED_TRAIT: "Forget Trait"
