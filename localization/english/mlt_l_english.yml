@@ -1,49 +1,74 @@
 ﻿l_english:
 
-# DECISION EFFECT
- REMOVE_LEVELED_TRAIT_DECISION_WARNING_DESC:1 "@warning_icon!#X This will remove all [trait_level_track_xp|E]"
+# MISSING TRAIT PATH LOCALIZATION
+ trait_track_blademaster: "$trait_lifestyle_blademaster$"
+ trait_track_reveler: "$trait_lifestyle_reveler$"
+ trait_track_physician: "$trait_lifestyle_physician$"
+ trait_track_mystic: "$trait_lifestyle_mystic$"
+
+# TOAST
+ mlt_add_trait_xp_toast_title: "Trait Upgraded"
+ mlt_add_trait_xp_toast_desc: "Your [lifestyle_trait|E] gained [trait_level_track_xp|E]"
+ mlt_remove_trait_xp_toast_title: "Trait Downgraded"
+ mlt_remove_trait_xp_toast_desc: "Your [lifestyle_trait|E] lost [trait_level_track_xp|E]"
 
 # PREFIX
  mlt_title_prefix_gain:0 "Gain"
  mlt_title_prefix_lose:0 "Lose"
 
 # DECISION
-
- mlt_leveled_trait_decision_lose: "$mlt_title_prefix_lose$ a leveled Trait "
- mlt_leveled_trait_decision_desc: "In a bold and decisive move, you renounce a [trait|L], embracing a path less traveled. This departure signifies an exodus from the past, heralding a journey into uncharted territories of character development."
-
- mlt_choose_leveled_trait_blademaster_name: "[GetTrait('lifestyle_blademaster').GetName( ROOT.Char )]"
- mlt_choose_leveled_trait_blademaster_name_lose: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('lifestyle_blademaster').GetName( ROOT.Char )]#!#!"
- mlt_choose_leveled_trait_blademaster_desc: "$trait_blademaster_1_desc$"
- mlt_choose_leveled_trait_blademaster_tooltip: "$trait_blademaster_1_desc$" 
-
- mlt_choose_leveled_trait_reveler_name: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('lifestyle_reveler').GetName( ROOT.Char )]#!#!"
- mlt_choose_leveled_trait_reveler_desc: "$trait_blademaster_1_desc$"
- mlt_choose_leveled_trait_reveler_tooltip: "$trait_blademaster_1_desc$" 
-
- mlt_choose_leveled_trait_physician_name: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('lifestyle_physician').GetName( ROOT.Char )]#!#!"
- mlt_choose_leveled_trait_physician_desc: "$trait_blademaster_1_desc$"
- mlt_choose_leveled_trait_physician_tooltip: "$trait_blademaster_1_desc$" 
-
- mlt_choose_leveled_trait_pilgrim_name: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('pilgrim').GetName( ROOT.Char )]#!#!"
- mlt_choose_leveled_trait_pilgrim_desc: "$trait_blademaster_1_desc$"
- mlt_choose_leveled_trait_pilgrim_tooltip: "$trait_blademaster_1_desc$" 
-
- mlt_choose_leveled_trait_mystic_name: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('lifestyle_mystic').GetName( ROOT.Char )]#!#!"
- mlt_choose_leveled_trait_mystic_desc: "$trait_blademaster_1_desc$"
- mlt_choose_leveled_trait_mystic_tooltip: "$trait_blademaster_1_desc$" 
-
- mlt_choose_leveled_trait_hunter_name: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('lifestyle_hunter').GetName( ROOT.Char )]#!#!"
- mlt_choose_leveled_trait_hunter_desc: "$trait_blademaster_1_desc$"
- mlt_choose_leveled_trait_hunter_tooltip: "$trait_blademaster_1_desc$"
-
- mlt_choose_leveled_trait_traveler_name: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('lifestyle_traveler').GetName( ROOT.Char )]#!#!"
- mlt_choose_leveled_trait_traveler_desc: "$trait_blademaster_1_desc$"
- mlt_choose_leveled_trait_traveler_tooltip: "$trait_blademaster_1_desc$"
-
- mlt_choose_leveled_trait_hastiluder_name: "Forget a #E Leveled [trait|U]#!\n#low Lose #N [GetTrait('tourney_participant').GetName( ROOT.Char )]#!#!"
- mlt_choose_leveled_trait_hastiluder_desc: "$trait_blademaster_1_desc$"
- mlt_choose_leveled_trait_hastiluder_tooltip: "$trait_blademaster_1_desc$"
-
+ mlt_leveled_trait_decision: "Alter Lifestyle Trait"
+ mlt_leveled_trait_decision_desc: "In a bold stride, you embrace a new path, leaving behind what was your former self. This choice signals a departure from the past, marking an expedition into uncharted territories of character."
+ mlt_leveled_trait_decision_tooltip: "Learn a new [lifestyle_trait|E] or forget another"
  mlt_leveled_trait_decision_confirm: "Embrace Change" 
- MLT_CHOOSE_LEVELED_TRAIT: "Forget Trait"
+ mlt_leveled_trait_decision_second_step: "Modify"
+
+ remove_trait_lose_xp_decision_warning:1 "@warning_icon!#X [trait_level_track_xp|E] will be forfeited"
+
+ choose_trait_blademaster_name: "[GetTrait('lifestyle_blademaster').GetName( ROOT.Char )]"
+ choose_trait_blademaster_name_improve: "Improve [GetTrait('lifestyle_blademaster').GetName( ROOT.Char )] \n#low Gain [trait_level_track_xp|E]#!"
+ choose_trait_blademaster_name_gain: "Learn [GetTrait('lifestyle_blademaster').GetName( ROOT.Char )] \n#low Gain [lifestyle_trait|E]#!"
+ choose_trait_blademaster_name_lose: "Forget [GetTrait('lifestyle_blademaster').GetName( ROOT.Char )] \n#low Lose [lifestyle_trait|E]#!"
+ choose_trait_blademaster_tooltip: "#T $trait_blademaster_1$#!"
+
+ choose_trait_reveler_name: "[GetTrait('lifestyle_reveler').GetName( ROOT.Char )]"
+ choose_trait_reveler_name_improve: "Improve [GetTrait('lifestyle_reveler').GetName( ROOT.Char )] \n#low Gain [trait_level_track_xp|E]#!"
+ choose_trait_reveler_name_gain: "Learn [GetTrait('lifestyle_reveler').GetName( ROOT.Char )] \n#low Gain [lifestyle_trait|E]#!"
+ choose_trait_reveler_name_lose: "Forget [GetTrait('lifestyle_reveler').GetName( ROOT.Char )] \n#low Lose [lifestyle_trait|E]#!"
+ choose_trait_reveler_tooltip: "#T $trait_reveler_1$#!"
+
+ choose_trait_physician_name: "[GetTrait('lifestyle_physician').GetName( ROOT.Char )]"
+ choose_trait_physician_name_improve: "Improve [GetTrait('lifestyle_physician').GetName( ROOT.Char )] \n#low Gain [trait_level_track_xp|E]#!"
+ choose_trait_physician_name_gain: "Learn [GetTrait('lifestyle_physician').GetName( ROOT.Char )] \n#low Gain [lifestyle_trait|E]#!"
+ choose_trait_physician_name_lose: "Forget [GetTrait('lifestyle_physician').GetName( ROOT.Char )] \n#low Lose [lifestyle_trait|E]#!"
+ choose_trait_physician_tooltip: "#T $trait_physician_1$#!"
+
+ choose_trait_pilgrim_name: "[GetTrait('pilgrim').GetName( ROOT.Char )]"
+ choose_trait_pilgrim_name_improve: "Improve [GetTrait('pilgrim').GetName( ROOT.Char )] \n#low Gain [trait_level_track_xp|E]#!"
+ choose_trait_pilgrim_name_gain: "Learn [GetTrait('pilgrim').GetName( ROOT.Char )] \n#low Gain [lifestyle_trait|E]#!"
+ choose_trait_pilgrim_name_lose: "Forget [GetTrait('pilgrim').GetName( ROOT.Char )] \n#low Lose [lifestyle_trait|E]#!"
+ choose_trait_pilgrim_tooltip: "#T $trait_pilgrim$#!"
+
+ choose_trait_mystic_name: "[GetTrait('lifestyle_mystic').GetName( ROOT.Char )]"
+ choose_trait_mystic_name_improve: "Improve [GetTrait('lifestyle_mystic').GetName( ROOT.Char )] \n#low Gain [trait_level_track_xp|E]#!"
+ choose_trait_mystic_name_gain: "Learn [GetTrait('lifestyle_mystic').GetName( ROOT.Char )] \n#low Gain [lifestyle_trait|E]#!"
+ choose_trait_mystic_name_lose: "Forget [GetTrait('lifestyle_mystic').GetName( ROOT.Char )] \n#low Lose [lifestyle_trait|E]#!"
+ choose_trait_mystic_tooltip: "#T Wise Man/Woman"
+
+ choose_trait_hunter_name: "[GetTrait('lifestyle_hunter').GetName( ROOT.Char )]"
+ choose_trait_hunter_name_improve: "Improve [GetTrait('lifestyle_hunter').GetName( ROOT.Char )] \n#low Gain [trait_level_track_xp|E]#!"
+ choose_trait_hunter_name_gain: "Learn [GetTrait('lifestyle_hunter').GetName( ROOT.Char )] \n#low Gain [lifestyle_trait|E]#!"
+ choose_trait_hunter_name_lose: "Forget [GetTrait('lifestyle_hunter').GetName( ROOT.Char )] \n#low Lose [lifestyle_trait|E]#!"
+ choose_trait_hunter_tooltip: "#T $trait_hunter_1$#!"
+
+ choose_trait_traveler_name: "[GetTrait('lifestyle_traveler').GetName( ROOT.Char )]"
+ choose_trait_traveler_name_improve: "Improve [GetTrait('lifestyle_traveler').GetName( ROOT.Char )] \n#low Gain [trait_level_track_xp|E]#!"
+ choose_trait_traveler_name_gain: "Learn [GetTrait('lifestyle_traveler').GetName( ROOT.Char )] \n#low Gain [lifestyle_trait|E]#!"
+ choose_trait_traveler_name_lose: "Forget [GetTrait('lifestyle_traveler').GetName( ROOT.Char )] \n#low Lose [lifestyle_trait|E]#!"
+ choose_trait_traveler_tooltip: "#T $trait_traveler_1$#!"
+
+ choose_trait_hastiluder_name: "[GetTrait('tourney_participant').GetName( ROOT.Char )]"
+ choose_trait_hastiluder_name_improve: "Improve [GetTrait('tourney_participant').GetName( ROOT.Char )] \n#low Gain [trait_level_track_xp|E]#!"
+ choose_trait_hastiluder_name_gain: "Learn [GetTrait('tourney_participant').GetName( ROOT.Char )] \n#low Gain [lifestyle_trait|E]#!"
+ choose_trait_hastiluder_name_lose: "Forget [GetTrait('tourney_participant').GetName( ROOT.Char )] \n#low Lose [lifestyle_trait|E]#!"
+ choose_trait_hastiluder_tooltip: "#T $trait_tourney_participant$#!"
