@@ -1,5 +1,0 @@
-mlt_remove_leveled_trait_decision_warning_effect = {
-    global = REMOVE_LEVELED_TRAIT_DECISION_WARNING_DESC
-    first = REMOVE_LEVELED_TRAIT_DECISION_WARNING_DESC
-    #second = REMOVE_LEVELED_TRAIT_DECISION_WARNING_DESC
-}

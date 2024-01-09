@@ -1,205 +1,451 @@
 
 mlt_leveled_trait_decision = {
 	ai_check_interval = 0
-	title = mlt_leveled_trait_decision_lose
-	picture = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	title = mlt_leveled_trait_decision
+	desc = mlt_leveled_trait_decision_desc
+	confirm_text = mlt_leveled_trait_decision_confirm
+	selection_tooltip = mlt_leveled_trait_decision_tooltip
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	major = yes
 
-	desc = mlt_leveled_trait_decision_desc
-	
-	#cooldown = { days = 0 }
+	is_shown = {} 
 
-	is_shown = {
-		#has_ep2_dlc_trigger = yes
-	} 
+	is_valid_showing_failures_only = {}
 
-	is_valid_showing_failures_only = {
-		mlt_has_any_leveled_trait_trigger = yes
-	}
-
-	is_valid = {
-		#mlt_has_any_leveled_trait = yes 
-	}
+	is_valid = {}
 
 	widget = {
-		gui = "decision_view_widget_generic_multichoice_with_effects"
+		gui = "decision_view_widget_option_list_generic"
 		controller = decision_option_list_controller
-		decision_to_second_step_button = "MLT_CHOOSE_LEVELED_TRAIT"
+		decision_to_second_step_button = mlt_leveled_trait_decision_second_step
 		show_from_start = yes
 
-		desc = mlt_leveled_trait_decision_desc
-
-		# BLADEMASTER ITEM
+		# ITEM BLADEMASTER
 		item = {
-			value = mlt_choose_leveled_trait_blademaster
-			is_valid = { 
-				has_trait = lifestyle_blademaster 
+			value = choose_trait_blademaster
+			localization = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { NOT = { has_trait = lifestyle_blademaster }	}
+						desc = choose_trait_blademaster_name_gain
+					}
+					triggered_desc = {
+						trigger = {	has_trait_xp = { trait = lifestyle_blademaster track = blademaster value < trait_third_level } }
+						desc = choose_trait_blademaster_name_improve
+					}
+					desc = choose_trait_blademaster_name_lose
+				}
 			}
-			current_description = mlt_choose_leveled_trait_blademaster_desc
-			localization = mlt_choose_leveled_trait_blademaster_name_lose
-			#localization = mlt_choose_leveled_trait_blademaster_name
 			icon = "gfx/interface/icons/traits/blademaster.dds"
 			ai_chance = { base = 0 } 
 		}
-		# REVELER ITEM
+
+		# ITEM REVELER
 		item = {
-			value = mlt_choose_leveled_trait_reveler
-			is_valid = { has_trait = lifestyle_reveler }
-			current_description = mlt_choose_leveled_trait_reveler_desc # tooltip info
-			localization = mlt_choose_leveled_trait_reveler_name # list name
+			value = choose_trait_reveler
+			localization = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { NOT = { has_trait = lifestyle_reveler }	}
+						desc = choose_trait_reveler_name_gain
+					}
+					triggered_desc = {
+						trigger = {	has_trait_xp = { trait = lifestyle_reveler track = reveler value < trait_third_level } }
+						desc = choose_trait_reveler_name_improve
+					}
+					desc = choose_trait_reveler_name_lose
+				}
+			}
 			icon = "gfx/interface/icons/traits/reveler.dds"
 			ai_chance = { base = 0 } 
 		}
-		# PHYSICIAN ITEM
+
+		# ITEM PHYSICIAN
 		item = {
-			value = mlt_choose_leveled_trait_physician
-			is_valid = { has_trait = lifestyle_physician }
-			current_description = mlt_choose_leveled_trait_physician_desc # tooltip info
-			localization = mlt_choose_leveled_trait_physician_name # list name
+			value = choose_trait_physician
+			localization = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { NOT = { has_trait = lifestyle_physician }	}
+						desc = choose_trait_physician_name_gain
+					}
+					triggered_desc = {
+						trigger = {	has_trait_xp = { trait = lifestyle_physician track = physician value < trait_third_level } }
+						desc = choose_trait_physician_name_improve
+					}
+					desc = choose_trait_physician_name_lose
+				}
+			}
 			icon = "gfx/interface/icons/traits/physician.dds"
 			ai_chance = { base = 0 } 
 		}
-		# PILGRIM ITEM
+
+		# ITEM PILGRIM
 		item = {
-			value = mlt_choose_leveled_trait_pilgrim
-			is_valid = { has_trait = pilgrim }
-			current_description = mlt_choose_leveled_trait_pilgrim_desc # tooltip info
-			localization = mlt_choose_leveled_trait_physician_name # list name
+			value = choose_trait_pilgrim
+			localization = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { NOT = { has_trait = pilgrim }	}
+						desc = choose_trait_pilgrim_name_gain
+					}
+					triggered_desc = {
+						trigger = {	has_trait_xp = { trait = pilgrim track = pilgrim value < trait_third_level } }
+						desc = choose_trait_pilgrim_name_improve
+					}
+					desc = choose_trait_pilgrim_name_lose
+				}
+			}			
 			icon = "gfx/interface/icons/traits/pilgrim.dds"
 			ai_chance = { base = 0 } 
 		}
-		# MYSTIC ITEM
+
+		# ITEM MYSTIC
 		item = {
-			value = mlt_choose_leveled_trait_mystic
-			is_valid = { has_trait = lifestyle_mystic }
-			current_description = mlt_choose_leveled_trait_mystic_desc # tooltip info
-			localization = mlt_choose_leveled_trait_mystic_name # list name
+			value = choose_trait_mystic
+			localization = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { NOT = { has_trait = lifestyle_mystic }	}
+						desc = choose_trait_mystic_name_gain
+					}
+					triggered_desc = {
+						trigger = {	has_trait_xp = { trait = lifestyle_mystic track = mystic value < trait_third_level } }
+						desc = choose_trait_mystic_name_improve
+					}
+					desc = choose_trait_mystic_name_lose
+				}
+			}
 			icon = "gfx/interface/icons/traits/mystic.dds"
 			ai_chance = { base = 0 } 
 		}
-		# HUNTER ITEM
+
+		# ITEM HUNTER
 		item = {
-			value = mlt_choose_leveled_trait_hunter
-			is_valid = { has_trait = lifestyle_hunter }
-			current_description = mlt_choose_leveled_trait_hunter_desc # tooltip info
-			localization = mlt_choose_leveled_trait_hunter_name # list name
+			value = choose_trait_hunter
+			localization = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { NOT = { has_trait = lifestyle_hunter }	}
+						desc = choose_trait_hunter_name_gain
+					}
+					triggered_desc = {
+						trigger = {	
+							OR = {
+								has_trait_xp = { trait = lifestyle_hunter track = hunter value < trait_third_level }
+								has_trait_xp = { trait = lifestyle_hunter track = falconer value < trait_third_level }
+							} 
+						}
+						desc = choose_trait_hunter_name_improve
+					}
+					desc = choose_trait_hunter_name_lose
+				}
+			}
 			icon = "gfx/interface/icons/traits/hunter.dds"
 			ai_chance = { base = 0 } 
 		}
-		# TRAVELER ITEM
+
+		# ITEM TRAVELER
 		item = {
-			value = mlt_choose_leveled_trait_traveler
-			is_valid = { has_trait = lifestyle_traveler }
-			current_description = mlt_choose_leveled_trait_traveler_desc # tooltip info
-			localization = mlt_choose_leveled_trait_traveler_name # list name
+			is_shown = { has_ep2_dlc_trigger = yes }
+			#is_valid = { has_ep2_dlc_trigger = no }
+			value = choose_trait_traveler
+			localization = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { NOT = { has_trait = lifestyle_traveler }	}
+						desc = choose_trait_traveler_name_gain
+					}
+					triggered_desc = {
+						OR = {
+							trigger = {	has_trait_xp = { trait = lifestyle_traveler track = travel value < trait_third_level } }
+							trigger = {	has_trait_xp = { trait = lifestyle_traveler track = danger value < trait_third_level } }
+						}
+						desc = choose_trait_traveler_name_improve
+					}
+					desc = choose_trait_traveler_name_lose
+				}
+			}
 			icon = "gfx/interface/icons/traits/traveler.dds"
 			ai_chance = { base = 0 } 
 		}
-		# HASTILUDER ITEM
+
+		# ITEM HASTILUDER
 		item = {
-			value = mlt_choose_leveled_trait_hastiluder
-			is_valid = { has_trait = tourney_participant }
-			current_description = mlt_choose_leveled_trait_hastiluder_desc # tooltip info
-			localization = mlt_choose_leveled_trait_hastiluder_name # list name
+			is_shown = { has_ep2_dlc_trigger = yes }
+			#is_valid = { has_ep2_dlc_trigger = no }
+			value = choose_trait_hastiluder
+			localization = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { NOT = { has_trait = tourney_participant }	}
+						desc = choose_trait_hastiluder_name_gain
+					}
+					triggered_desc = {
+						trigger = {	
+							OR = {
+								has_trait_xp = { trait = tourney_participant track = foot value < trait_third_level }
+								has_trait_xp = { trait = tourney_participant track = bow value < trait_third_level }
+								has_trait_xp = { trait = tourney_participant track = horse value < trait_third_level }
+								has_trait_xp = { trait = tourney_participant track = wit value < trait_third_level }
+							} 
+						}
+						desc = choose_trait_hastiluder_name_improve
+					}
+					desc = choose_trait_hastiluder_name_lose
+				}
+			}
 			icon = "gfx/interface/icons/traits/tournament.dds"
 			ai_chance = { base = 0 } 
 		}
+
+		
 	}
 
 	effect = {
-		if = { # BLADEMASTER EFFECT
-			limit = { scope:mlt_choose_leveled_trait_blademaster = yes }
-			show_as_tooltip = { 
-				remove_trait = lifestyle_blademaster 
-				#custom_description_no_bullet = { text = mlt_remove_leveled_trait_decision_warning_effect }
+		
+		# EFFECT BLADEMASTER
+		if = {
+			limit = { scope:choose_trait_blademaster = yes }
+			if = {
+				limit = { 
+					OR = {
+						NOT = { has_trait = lifestyle_blademaster }
+						has_trait_xp = { trait = lifestyle_blademaster track = blademaster value < trait_third_level } 
+					}
+				}
+				show_as_tooltip = {	
+					add_trait = lifestyle_blademaster 
+					add_trait_xp = { TRAIT = lifestyle_blademaster track = blademaster value = trait_third_level } 
+				}
+				#show_as_tooltip = { add_trait_xp = { TRAIT = lifestyle_blademaster value = trait_third_level } }
+				trigger_event = { id = modify_leveled_trait_events.1001 }
 			}
-			trigger_event = {
-				id = modify_leveled_trait_events.1002
-			}
-		}
-		else_if = { # REVELER EFFECT
-			limit = { scope:mlt_choose_leveled_trait_reveler = yes }
-			show_as_tooltip = { 
-				remove_trait = lifestyle_reveler 
-				#custom_description_no_bullet = { text = mlt_remove_leveled_trait_decision_warning_effect }
-			}
-			trigger_event = {
-				id = modify_leveled_trait_events.1012
-			}
-		}
-		else_if = { # PHYSICIAN EFFECT
-			limit = { scope:mlt_choose_leveled_trait_physician = yes }
-			show_as_tooltip = { 
-				remove_trait = lifestyle_physician
-				#custom_description_no_bullet = { text = mlt_remove_leveled_trait_decision_warning_effect }
-			}
-			trigger_event = {
-				id = modify_leveled_trait_events.1022
+			else = {
+				show_as_tooltip = {	
+					custom_tooltip = remove_trait_lose_xp_decision_warning
+					remove_trait = lifestyle_blademaster 
+				}
+				trigger_event = { id = modify_leveled_trait_events.1002 }
 			}
 		}
-		else_if = { # PILGRIM EFFECT
-			limit = { scope:mlt_choose_leveled_trait_pilgrim = yes }
-			show_as_tooltip = { 
-				remove_trait = pilgrim
-				#custom_description_no_bullet = { text = mlt_remove_leveled_trait_decision_warning_effect }
+
+		# EFFECT REVELER
+		else_if = {
+			limit = { scope:choose_trait_reveler = yes }
+			if = {
+				limit = { 
+					OR = {
+						NOT = { has_trait = lifestyle_reveler }
+						has_trait_xp = { trait = lifestyle_reveler track = reveler value < trait_third_level } 
+					}
+				}
+				show_as_tooltip = {	
+					add_trait = lifestyle_reveler 
+					add_trait_xp = { TRAIT = lifestyle_reveler track = reveler value = trait_third_level } 
+				}
+				trigger_event = { id = modify_leveled_trait_events.1011 }
 			}
-			trigger_event = {
-				id = modify_leveled_trait_events.1032
-			}
-		}
-		else_if = { # MYSTIC EFFECT
-			limit = { scope:mlt_choose_leveled_trait_mystic = yes }
-			show_as_tooltip = { 
-				remove_trait = lifestyle_mystic
-				#custom_description_no_bullet = { text = mlt_remove_leveled_trait_decision_warning_effect }
-			}
-			trigger_event = {
-				id = modify_leveled_trait_events.1042
-			}
-		}
-		else_if = { # HUNTER EFFECT
-			limit = { scope:mlt_choose_leveled_trait_mystic = yes }
-			show_as_tooltip = { 
-				remove_trait = lifestyle_mystic
-				#custom_description_no_bullet = { text = mlt_remove_leveled_trait_decision_warning_effect }
-			}
-			trigger_event = { # HUNTER TRACK
-				id = modify_leveled_trait_events.1052
-			}
-			trigger_event = { # FALCONER TRACK
-				id = modify_leveled_trait_events.1054
+			else = {
+				show_as_tooltip = {	
+					custom_tooltip = remove_trait_lose_xp_decision_warning
+					remove_trait = lifestyle_reveler 
+				}
+				trigger_event = { id = modify_leveled_trait_events.1012 }
 			}
 		}
-		else_if = { # TRAVELER EFFECT
-			limit = { scope:mlt_choose_leveled_trait_traveler = yes }
-			show_as_tooltip = { 
-				remove_trait = lifestyle_traveler
-				#custom_description_no_bullet = { text = mlt_remove_leveled_trait_decision_warning_effect }
+		
+		# EFFECT PHYSICIAN
+		else_if = {
+			limit = { scope:choose_trait_physician = yes }
+			if = {
+				limit = { 
+					OR = {
+						NOT = { has_trait = lifestyle_physician }
+						has_trait_xp = { trait = lifestyle_physician track = physician value < trait_third_level } 
+					}
+				}
+				show_as_tooltip = {	
+					add_trait = lifestyle_physician 
+					add_trait_xp = { TRAIT = lifestyle_physician track = physician value = trait_third_level } 
+				}
+				trigger_event = { id = modify_leveled_trait_events.1021 }
 			}
-			trigger_event = { # TRAVEL TRACK
-				id = modify_leveled_trait_events.1062
-			}
-			trigger_event = { # DANGER TRACK
-				id = modify_leveled_trait_events.1064
+			else = {
+				show_as_tooltip = {	
+					custom_tooltip = remove_trait_lose_xp_decision_warning
+					remove_trait = lifestyle_physician 
+				}
+				trigger_event = { id = modify_leveled_trait_events.1022 }
 			}
 		}
-		else_if = { # HASTILUDER EFFECT
-			limit = { scope:mlt_choose_leveled_trait_hastiluder = yes }
-			show_as_tooltip = { 
-				remove_trait = tourney_participant
-				#custom_description_no_bullet = { text = mlt_remove_leveled_trait_decision_warning_effect }
+
+		# EFFECT PILGRIM
+		else_if = {
+			limit = { scope:choose_trait_pilgrim = yes }
+			if = {
+				limit = { 
+					OR = {
+						NOT = { has_trait = pilgrim }
+						has_trait_xp = { trait = pilgrim track = pilgrim value < trait_third_level } 
+					}
+				}
+				show_as_tooltip = {	
+					add_trait = pilgrim 
+					add_trait_xp = { TRAIT = pilgrim track = pilgrim value = trait_third_level } 
+				}
+				trigger_event = { id = modify_leveled_trait_events.1031 }
 			}
-			trigger_event = { # FOOT TRACK
-				id = modify_leveled_trait_events.1072
+			else = {
+				show_as_tooltip = {	
+					custom_tooltip = remove_trait_lose_xp_decision_warning
+					remove_trait = pilgrim 
+				}
+				trigger_event = { id = modify_leveled_trait_events.1032 }
 			}
-			trigger_event = { # BOW TRACK
-				id = modify_leveled_trait_events.1074
+		}
+
+		# EFFECT MYSTIC
+		else_if = {
+			limit = { scope:choose_trait_mystic = yes }
+			if = {
+				limit = { 
+					OR = {
+						NOT = { has_trait = lifestyle_mystic }
+						has_trait_xp = { trait = lifestyle_mystic track = mystic value < trait_third_level } 
+					}
+				}
+				show_as_tooltip = {	
+					add_trait = lifestyle_mystic 
+					add_trait_xp = { TRAIT = lifestyle_mystic track = mystic value = trait_third_level } 
+				}
+				trigger_event = { id = modify_leveled_trait_events.1041 }
 			}
-			trigger_event = { # HORSE TRACK
-				id = modify_leveled_trait_events.1076
+			else = {
+				show_as_tooltip = {	
+					custom_tooltip = remove_trait_lose_xp_decision_warning
+					remove_trait = lifestyle_mystic 
+				}
+				trigger_event = { id = modify_leveled_trait_events.1042 }
 			}
-			trigger_event = { # WIT TRACK
-				id = modify_leveled_trait_events.1078
+		}
+
+		# EFFECT HUNTER
+		else_if = {
+			limit = { scope:choose_trait_hunter = yes }
+			if = {
+				limit = { 
+					OR = {
+						NOT = { has_trait = lifestyle_hunter }
+						has_trait_xp = { trait = lifestyle_hunter track = hunter value < trait_third_level }
+						has_trait_xp = { trait = lifestyle_hunter track = falconer value < trait_third_level } 
+					}
+				}
+				show_as_tooltip = {	
+					add_trait = lifestyle_hunter 
+					if = {
+						limit = { has_trait_xp = { trait = lifestyle_hunter track = hunter value < trait_third_level } }
+						add_trait_xp = { TRAIT = lifestyle_hunter track = hunter value = trait_third_level }
+					}
+					if = {
+						limit = { has_trait_xp = { trait = lifestyle_hunter track = falconer value < trait_third_level } }
+						add_trait_xp = { TRAIT = lifestyle_hunter track = falconer value = trait_third_level }
+					}
+				}
+				trigger_event = { id = modify_leveled_trait_events.1051 }
+				trigger_event = { id = modify_leveled_trait_events.1053 }
+			}
+			else = {
+				show_as_tooltip = {	
+					custom_tooltip = remove_trait_lose_xp_decision_warning
+					remove_trait = lifestyle_hunter 
+				}
+				trigger_event = { id = modify_leveled_trait_events.1052 }
+				trigger_event = { id = modify_leveled_trait_events.1054 }
+			}
+		}
+
+		# EFFECT TRAVELER
+		else_if = {
+			limit = { scope:choose_trait_traveler = yes }
+			if = {
+				limit = { 
+					OR = {
+						NOT = { has_trait = lifestyle_traveler }
+						has_trait_xp = { trait = lifestyle_traveler track = travel value < trait_third_level }
+						has_trait_xp = { trait = lifestyle_traveler track = danger value < trait_third_level } 
+					}
+				}
+				show_as_tooltip = {	
+					add_trait = lifestyle_traveler
+					if = {
+						limit = { has_trait_xp = { trait = lifestyle_traveler track = travel value < trait_third_level } }
+						add_trait_xp = { TRAIT = lifestyle_traveler track = travel value = trait_third_level }
+					}
+					if = {
+						limit = { has_trait_xp = { trait = lifestyle_traveler track = danger value < trait_third_level } }
+						add_trait_xp = { TRAIT = lifestyle_traveler track = danger value = trait_third_level }
+					}
+				}
+				trigger_event = { id = modify_leveled_trait_events.1061 }
+				trigger_event = { id = modify_leveled_trait_events.1063 }
+			}
+			else = {
+				show_as_tooltip = {	
+					custom_tooltip = remove_trait_lose_xp_decision_warning
+					remove_trait = lifestyle_traveler 
+				}
+				trigger_event = { id = modify_leveled_trait_events.1062 }
+				trigger_event = { id = modify_leveled_trait_events.1064 }
+			}
+		}
+		
+		# EFFECT HASTILUDER
+		else_if = {
+			limit = { scope:choose_trait_hastiluder = yes }
+			if = {
+				limit = { 
+					OR = {
+						NOT = { has_trait = tourney_participant }
+						has_trait_xp = { trait = tourney_participant track = foot value < trait_third_level }
+						has_trait_xp = { trait = tourney_participant track = bow value < trait_third_level } 
+						has_trait_xp = { trait = tourney_participant track = horse value < trait_third_level }
+						has_trait_xp = { trait = tourney_participant track = wit value < trait_third_level }
+					}
+				}
+				show_as_tooltip = {	
+					add_trait = tourney_participant 
+					if = {
+						limit = { has_trait_xp = { trait = tourney_participant track = foot value < trait_third_level } }
+						add_trait_xp = { TRAIT = tourney_participant track = foot value = trait_third_level }
+					}
+					if = {
+						limit = { has_trait_xp = { trait = tourney_participant track = bow value < trait_third_level } }
+						add_trait_xp = { TRAIT = tourney_participant track = bow value = trait_third_level }
+					}
+					if = {
+						limit = { has_trait_xp = { trait = tourney_participant track = horse value < trait_third_level } }
+						add_trait_xp = { TRAIT = tourney_participant track = horse value = trait_third_level }
+					}
+					if = {
+						limit = { has_trait_xp = { trait = tourney_participant track = wit value < trait_third_level } }
+						add_trait_xp = { TRAIT = tourney_participant track = wit value = trait_third_level }
+					}
+				}
+				trigger_event = { id = modify_leveled_trait_events.1071 }
+				trigger_event = { id = modify_leveled_trait_events.1073 }
+				trigger_event = { id = modify_leveled_trait_events.1075 }
+				trigger_event = { id = modify_leveled_trait_events.1077 }
+			}
+			else = {
+				show_as_tooltip = {	
+					custom_tooltip = remove_trait_lose_xp_decision_warning
+					remove_trait = tourney_participant 
+				}
+				trigger_event = { id = modify_leveled_trait_events.1072 }
+				trigger_event = { id = modify_leveled_trait_events.1074 }
+				trigger_event = { id = modify_leveled_trait_events.1076 }
+				trigger_event = { id = modify_leveled_trait_events.1078 }
 			}
 		}
 	}
