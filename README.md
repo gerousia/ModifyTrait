@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/gerousia/modify_trait_path/blob/v1.0-release/thumbnail.png" alt="Banner" width="60%" height="60%">
+  <img src="https://github.com/ginomari/modify_trait_path/blob/v1.0-release/thumbnail.png" alt="Banner" width="60%" height="60%">
 </div>
 
 ## Crusader Kings 3: Modify Trait Path Experience Mod
@@ -32,7 +32,7 @@ Introducing the new Decision called "Alter Lifestyle Trait":
 <details>
   <summary>Preview</summary>
   <div align="center">
-    <img src="https://github.com/gerousia/modify_trait_path/blob/v1.0-release/workshop/thumbnail.gif" alt="Preview" width="80%" height="80%">
+    <img src="https://github.com/ginomari/modify_trait_path/blob/v1.0-release/workshop/thumbnail.gif" alt="Preview" width="80%" height="80%">
   </div>
 </details>
 
