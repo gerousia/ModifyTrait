@@ -1,0 +1,77 @@
+﻿# German Translation
+# by SteamUser PhazezGova
+
+l_german:
+
+# MISSING TRAIT PATH LOCALIZATION
+trait_track_blademaster: "$trait_lifestyle_blademaster$"
+trait_track_reveler: "$trait_lifestyle_reveler$"
+trait_track_physician: "$trait_lifestyle_physician$"
+trait_track_mystic: "$trait_lifestyle_mystic$"
+
+# TOAST
+mlt_add_trait_xp_toast_title: "Eigenschaft aufgewertet"
+mlt_add_trait_xp_toast_desc: "Deine [lifestyle_trait|E] hat [trait_level_track_xp|E] gewonnen"
+mlt_remove_trait_xp_toast_title: "Eigenschaft abgewertet"
+mlt_remove_trait_xp_toast_desc: "Deine [lifestyle_trait|E] hat [trait_level_track_xp|E] verloren"
+
+# PREFIX
+mlt_title_prefix_gain:0 "Erhalten"
+mlt_title_prefix_lose:0 "Verlieren"
+
+# DECISION
+mlt_leveled_trait_decision: "Ändere die Lebensstil-Eigenschaft"
+mlt_leveled_trait_decision_desc: "Mit einem mutigen Schritt wählst du einen neuen Weg und lässt dein früheres Selbst hinter dir. Diese Wahl signalisiert eine Abkehr von der Vergangenheit und beginnt eine Expedition in die unerforschten Gebiete deines Charakters."
+mlt_leveled_trait_decision_tooltip: "Lerne eine neue [lifestyle_trait|E] oder vergiss eine andere"
+mlt_leveled_trait_decision_confirm: "Änderung annehmen"
+mlt_leveled_trait_decision_second_step: "Modifizieren"
+
+remove_trait_lose_xp_decision_warning:1 "@warning_icon!#X [trait_level_track_xp|E] wird verfallen"
+
+choose_trait_blademaster_name: "[GetTrait('lifestyle_blademaster').GetName( ROOT.Char )]"
+choose_trait_blademaster_name_improve: "Verbessere [GetTrait('lifestyle_blademaster').GetName( ROOT.Char )] \n#low Erhalte [trait_level_track_xp|E]#!"
+choose_trait_blademaster_name_gain: "Lerne [GetTrait('lifestyle_blademaster').GetName( ROOT.Char )] \n#low Erhalte [lifestyle_trait|E]#!"
+choose_trait_blademaster_name_lose: "Vergiss [GetTrait('lifestyle_blademaster').GetName( ROOT.Char )] \n#low Verliere [lifestyle_trait|E]#!"
+choose_trait_blademaster_tooltip: "#T $trait_blademaster_1$#!"
+
+choose_trait_reveler_name: "[GetTrait('lifestyle_reveler').GetName( ROOT.Char )]"
+choose_trait_reveler_name_improve: "Verbessere [GetTrait('lifestyle_reveler').GetName( ROOT.Char )] \n#low Erhalte [trait_level_track_xp|E]#!"
+choose_trait_reveler_name_gain: "Lerne [GetTrait('lifestyle_reveler').GetName( ROOT.Char )] \n#low Erhalte [lifestyle_trait|E]#!"
+choose_trait_reveler_name_lose: "Vergiss [GetTrait('lifestyle_reveler').GetName( ROOT.Char )] \n#low Verliere [lifestyle_trait|E]#!"
+choose_trait_reveler_tooltip: "#T $trait_reveler_1$#!"
+
+choose_trait_physician_name: "[GetTrait('lifestyle_physician').GetName( ROOT.Char )]"
+choose_trait_physician_name_improve: "Verbessere [GetTrait('lifestyle_physician').GetName( ROOT.Char )] \n#low Erhalte [trait_level_track_xp|E]#!"
+choose_trait_physician_name_gain: "Lerne [GetTrait('lifestyle_physician').GetName( ROOT.Char )] \n#low Erhalte [lifestyle_trait|E]#!"
+choose_trait_physician_name_lose: "Vergiss [GetTrait('lifestyle_physician').GetName( ROOT.Char )] \n#low Verliere [lifestyle_trait|E]#!"
+choose_trait_physician_tooltip: "#T $trait_physician_1$#!"
+
+choose_trait_pilgrim_name: "[GetTrait('pilgrim').GetName( ROOT.Char )]"
+choose_trait_pilgrim_name_improve: "Verbessere [GetTrait('pilgrim').GetName( ROOT.Char )] \n#low Erhalte [trait_level_track_xp|E]#!"
+choose_trait_pilgrim_name_gain: "Lerne [GetTrait('pilgrim').GetName( ROOT.Char )] \n#low Erhalte [lifestyle_trait|E]#!"
+choose_trait_pilgrim_name_lose: "Vergiss [GetTrait('pilgrim').GetName( ROOT.Char )] \n#low Verliere [lifestyle_trait|E]#!"
+choose_trait_pilgrim_tooltip: "#T $trait_pilgrim
+
+choose_trait_mystic_name: "[GetTrait('lifestyle_mystic').GetName( ROOT.Char )]"
+choose_trait_mystic_name_improve: "Verbessere [GetTrait('lifestyle_mystic').GetName( ROOT.Char )] \n#low Erhalte [trait_level_track_xp|E]#!"
+choose_trait_mystic_name_gain: "Lerne [GetTrait('lifestyle_mystic').GetName( ROOT.Char )] \n#low Erhalte [lifestyle_trait|E]#!"
+choose_trait_mystic_name_lose: "Vergiss [GetTrait('lifestyle_mystic').GetName( ROOT.Char )] \n#low Verliere [lifestyle_trait|E]#!"
+choose_trait_mystic_tooltip: "#T Weise(r) Frau/ Mann"
+
+choose_trait_hunter_name: "[GetTrait('lifestyle_hunter').GetName( ROOT.Char )]"
+choose_trait_hunter_name_improve: "Verbessere [GetTrait('lifestyle_hunter').GetName( ROOT.Char )] \n#low Erhalte [trait_level_track_xp|E]#!"
+choose_trait_hunter_name_gain: "Lerne [GetTrait('lifestyle_hunter').GetName( ROOT.Char )] \n#low Erhalte [lifestyle_trait|E]#!"
+choose_trait_hunter_name_lose: "Vergiss [GetTrait('lifestyle_hunter').GetName( ROOT.Char )] \n#low Verliere [lifestyle_trait|E]#!"
+choose_trait_hunter_tooltip: "#T $trait_hunter_1$#!"
+
+choose_trait_traveler_name: "[GetTrait('lifestyle_traveler').GetName( ROOT.Char )]"
+choose_trait_traveler_name_improve: "Verbessere [GetTrait('lifestyle_traveler').GetName( ROOT.Char )] \n#low Erhalte [trait_level_track_xp|E]#!"
+choose_trait_traveler_name_gain: "Lerne [GetTrait('lifestyle_traveler').GetName( ROOT.Char )] \n#low Erhalte [lifestyle_trait|E]#!"
+choose_trait_traveler_name_lose: "Vergiss [GetTrait('lifestyle_traveler').GetName( ROOT.Char )] \n#low Verliere [lifestyle_trait|E]#!"
+choose_trait_traveler_tooltip: "#T $trait_traveler_1$#!"
+
+choose_trait_hastiluder_name: "[GetTrait('tourney_participant').GetName( ROOT.Char )]"
+choose_trait_hastiluder_name_improve: "Verbessere [GetTrait('tourney_participant').GetName( ROOT.Char )] \n#low Erhalte [trait_level_track_xp|E]#!"
+choose_trait_hastiluder_name_gain: "Lerne [GetTrait('tourney_participant').GetName( ROOT.Char )] \n#low Erhalte [lifestyle_trait|E]#!"
+choose_trait_hastiluder_name_lose: "Vergiss [GetTrait('tourney_participant').GetName( ROOT.Char )] \n#low Verliere [lifestyle_trait|E]#!"
+choose_trait_hastiluder_tooltip: "#T $trait_tourney_participant$#!" 
